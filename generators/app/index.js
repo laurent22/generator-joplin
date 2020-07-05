@@ -32,10 +32,15 @@ module.exports = class extends Generator {
 	}
 
 	writing() {
+		// Due to WONTFIX bug in npm, which treats .gitignore and pakage.json in a special way,
+		// we need to give them a different name in the templates dir and then rename them
+		// when installing.
+		// https://github.com/npm/npm/issues/3763
+
 		const files = [
-			'.gitignore',
+			'.gitignore_TEMPLATE',
 			'global.d.ts',
-			'package.json',
+			'package_TEMPLATE.json',
 			'README.md',
 			'tsconfig.json',
 			'webpack.config.js',
@@ -44,9 +49,10 @@ module.exports = class extends Generator {
 		];
 
 		for (const file of files) {
+			const destFile = file.replace(/_TEMPLATE/, '');
 			this.fs.copyTpl(
 				this.templatePath(file),
-				this.destinationPath(file),
+				this.destinationPath(destFile),
 				this.props
 			);
 		}
