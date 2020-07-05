@@ -6,7 +6,7 @@ const yosay = require('yosay');
 
 module.exports = class extends Generator {
 	prompting() {
-		this.log(yosay(`Welcome to the fine ${chalk.red('generator-joplin-plugin')} generator!`));
+		this.log(yosay(`Welcome to the fine ${chalk.red('generator-joplin')} generator!`));
 
 		const prompts = [
 			{
