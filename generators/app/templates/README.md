@@ -11,12 +11,4 @@ The plugin is built using webpack, which create the compiled code in `/dist`. Th
 
 ## Building the plugin
 
-First install the plugin template:
-
-	git clone https://github.com/laurent22/joplin-plugin my-plugin
-	cd my-plugin
-	npm install
-
-Then build the plugin:
-
-	npm run dist
+To build the plugin, simply run `npm run dist`.

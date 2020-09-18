@@ -1,5 +1,6 @@
-# generator-joplin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Scaffolds out a new Joplin plugin
+# generator-joplin
+
+Scaffolds out a new Joplin plugin
 
 ## Installation
 
@@ -16,21 +17,10 @@ Then generate your new project:
 yo joplin
 ```
 
-## Getting To Know Yeoman
+## Development
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+To test the generator for development purposes, follow the instructions there: https://yeoman.io/authoring/#running-the-generator
 
 ## License
 
-MIT © [Laurent Cozic]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-joplin.svg
-[npm-url]: https://npmjs.org/package/generator-joplin
-[travis-image]: https://travis-ci.com/laurent22/generator-joplin.svg?branch=master
-[travis-url]: https://travis-ci.com/laurent22/generator-joplin
-[daviddm-image]: https://david-dm.org/laurent22/generator-joplin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/laurent22/generator-joplin
+MIT © Laurent Cozic

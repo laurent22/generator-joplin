@@ -22,7 +22,17 @@ module.exports = {
 	plugins: [
 		new CopyPlugin({
 			patterns: [
-				{ from: 'src/manifest.json', to: 'manifest.json' }
+				{
+					from: "**/*",
+					context: path.resolve(__dirname, 'src'),
+					to: path.resolve(__dirname, 'dist'),
+					globOptions: {
+						ignore: [
+							'**/*.ts',
+							'**/*.tsx',
+						],
+					},
+				},
 			],
 		}),
 	],
