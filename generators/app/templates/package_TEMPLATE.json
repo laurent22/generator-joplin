@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dist": "webpack"
+    "dist": "webpack",
+    "postinstall": "npm run dist"
   },
   "keywords": [],
   "author": "",
