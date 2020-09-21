@@ -1,5 +1,5 @@
 {
-  "name": "<%= pluginName %>",
+  "name": "joplin_plugin",
   "version": "1.0.0",
   "description": "",
   "scripts": {

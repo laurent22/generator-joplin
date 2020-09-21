@@ -1,6 +1,7 @@
 {
 	"manifest_version": 1,
 	"name": "<%= pluginName %>",
+	"description": "<%= pluginDescription %>",
 	"version": "1.0.0",
 	"author": "<%= pluginAuthor %>",
 	"homepage_url": "<%= pluginHomepageUrl %>"
