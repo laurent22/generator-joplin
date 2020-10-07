@@ -44,7 +44,7 @@ module.exports = class extends Generator {
 
 		const files = [
 			'.gitignore_TEMPLATE',
-			'global.d.ts',
+			'joplin.d.ts',
 			'package_TEMPLATE.json',
 			'README.md',
 			'tsconfig.json',
@@ -61,6 +61,11 @@ module.exports = class extends Generator {
 				this.props
 			);
 		}
+
+		this.fs.copy(
+			this.templatePath('types'),
+			this.destinationPath('types')
+		);
 	}
 
 	install() {
