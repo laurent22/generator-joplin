@@ -1,7 +1,4 @@
-export interface EditorCommand {
-    name: string;
-    value?: any;
-}
+import { EditorCommand } from '.';
 export default class JoplinWorkspace {
     private store;
     private implementation_;

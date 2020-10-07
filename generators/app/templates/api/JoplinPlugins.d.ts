@@ -1,8 +1,6 @@
 import Plugin from '../Plugin';
 import Logger from 'lib/Logger';
-interface Script {
-    onStart?(event: any): Promise<void>;
-}
+import { Script } from '.';
 /**
  * This class provides access to plugin-related features.
  */
@@ -24,4 +22,3 @@ export default class JoplinPlugins {
      */
     register(script: Script): Promise<void>;
 }
-export {};

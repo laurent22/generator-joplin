@@ -1,5 +1,5 @@
 import Plugin from '../Plugin';
-import { ViewHandle } from './JoplinViews';
+import { ViewHandle } from '.';
 export default class JoplinViewsPanels {
     private store;
     private plugin;

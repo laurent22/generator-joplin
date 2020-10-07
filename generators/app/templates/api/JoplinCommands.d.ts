@@ -1,11 +1,4 @@
-interface Command {
-    name: string;
-    label: string;
-    iconName?: string;
-    execute(props: any): Promise<any>;
-    isEnabled?(props: any): boolean;
-    mapStateToProps?(state: any): any;
-}
+import { Command } from '.';
 /**
  * This class allows executing or registering new Joplin commands. Commands can be executed or associated with
  * {@link JoplinViewsToolbarButtons | toolbar buttons} or {@link JoplinViewsMenuItems | menu items}.
@@ -45,4 +38,3 @@ export default class JoplinCommands {
      */
     register(command: Command): Promise<void>;
 }
-export {};

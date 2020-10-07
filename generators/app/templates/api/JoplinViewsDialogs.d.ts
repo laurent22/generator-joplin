@@ -1,10 +1,5 @@
 import Plugin from '../Plugin';
-import { ViewHandle } from './JoplinViews';
-export interface ButtonSpec {
-    id: string;
-    title?: string;
-    onClick?(): void;
-}
+import { ButtonSpec, ViewHandle } from '.';
 export default class JoplinViewsDialogs {
     private store;
     private plugin;
