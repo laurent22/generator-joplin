@@ -1,5 +1,5 @@
 import Plugin from '../Plugin';
-import { ButtonSpec, ViewHandle } from '.';
+import { ButtonSpec, ViewHandle } from './types';
 export default class JoplinViewsDialogs {
     private store;
     private plugin;

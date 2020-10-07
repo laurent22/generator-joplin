@@ -1,4 +1,4 @@
-import { Command } from '.';
+import { Command } from './types';
 /**
  * This class allows executing or registering new Joplin commands. Commands can be executed or associated with
  * {@link JoplinViewsToolbarButtons | toolbar buttons} or {@link JoplinViewsMenuItems | menu items}.

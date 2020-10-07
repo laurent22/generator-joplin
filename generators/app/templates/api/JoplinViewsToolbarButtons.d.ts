@@ -1,4 +1,4 @@
-import { ToolbarButtonLocation } from '.';
+import { ToolbarButtonLocation } from './types';
 import Plugin from '../Plugin';
 import ToolbarButtonController from '../ToolbarButtonController';
 export default class JoplinViewsToolbarButtons {

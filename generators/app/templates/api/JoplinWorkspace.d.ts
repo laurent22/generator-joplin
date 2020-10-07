@@ -1,4 +1,4 @@
-import { EditorCommand } from '.';
+import { EditorCommand } from './types';
 export default class JoplinWorkspace {
     private store;
     private implementation_;

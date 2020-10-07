@@ -1,6 +1,6 @@
 import Plugin from '../Plugin';
 import Logger from 'lib/Logger';
-import { Script } from '.';
+import { Script } from './types';
 /**
  * This class provides access to plugin-related features.
  */
