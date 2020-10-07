@@ -1,4 +1,4 @@
-import joplin from 'joplin';
+import joplin from 'api/index';
 
 joplin.plugins.register({
 	onStart: async function() {
