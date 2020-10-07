@@ -7,4 +7,5 @@ npm run generatePluginTypes
 
 cd "$SCRIPT_DIR"
 rsync -a --delete "$JOPLIN_DIR/plugin_types/ReactNativeClient/lib/services/plugins/api/" "$SCRIPT_DIR/generators/app/templates/api/"
-#cp "$SCRIPT_DIR/generators/app/templates/index.ts" "$SCRIPT_DIR/generators/app/templates/api/index.ts"
+cp "$JOPLIN_DIR/ReactNativeClient/lib/services/plugins/api/index.ts" "$SCRIPT_DIR/generators/app/templates/api/"
+rm -f "$SCRIPT_DIR/generators/app/templates/api/index.d.ts"
