@@ -16,7 +16,8 @@ export default class JoplinViews {
     private panels_;
     private menuItems_;
     private toolbarButtons_;
-    constructor(plugin: Plugin, store: any);
+    private implementation_;
+    constructor(implementation: any, plugin: Plugin, store: any);
     get dialogs(): JoplinViewsDialogs;
     get panels(): JoplinViewsPanels;
     get menuItems(): JoplinViewsMenuItems;

@@ -10,12 +10,17 @@ import { ButtonSpec, ViewHandle, ButtonId } from './types';
 export default class JoplinViewsDialogs {
     private store;
     private plugin;
-    constructor(plugin: Plugin, store: any);
+    private implementation_;
+    constructor(implementation: any, plugin: Plugin, store: any);
     private controller;
     /**
      * Creates a new dialog
      */
     create(): Promise<ViewHandle>;
+    /**
+     * Displays a message box with OK/Cancel buttons. Returns the button index that was clicked - "0" for OK and "1" for "Cancel"
+     */
+    showMessageBox(message: string): Promise<number>;
     /**
      * Sets the dialog HTML content
      */
