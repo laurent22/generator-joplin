@@ -26,7 +26,7 @@ export enum ImportModuleOutputFormat {
 }
 
 /**
- * Used to implement a module to export data from Joplin. [View the demo plugin](https://github.com/laurent22/joplin/CliClient/tests/support/plugins/json_export) for an example.
+ * Used to implement a module to export data from Joplin. [View the demo plugin](https://github.com/laurent22/joplin/tree/dev/CliClient/tests/support/plugins/json_export) for an example.
  *
  * In general, all the event handlers you'll need to implement take a `context` object as a first argument. This object will contain the export or import path as well as various optional properties, such as which notes or notebooks need to be exported.
  *
@@ -154,16 +154,8 @@ export interface Script {
 }
 
 // =================================================================
-// View API types
+// Menu types
 // =================================================================
-
-export type ButtonId = string;
-
-export interface ButtonSpec {
-	id: ButtonId,
-	title?: string,
-	onClick?():void,
-}
 
 export interface CreateMenuItemOptions {
 	accelerator: string,
@@ -178,6 +170,25 @@ export enum MenuItemLocation {
 	Help = 'help',
 	Context = 'context',
 }
+
+export interface MenuItem {
+	commandName?: string,
+	accelerator?: string,
+	submenu?: MenuItem[],
+	label?: string,
+}
+
+// =================================================================
+// View API types
+// =================================================================
+
+export interface ButtonSpec {
+	id: ButtonId,
+	title?: string,
+	onClick?():void,
+}
+
+export type ButtonId = string;
 
 export enum ToolbarButtonLocation {
 	/**
