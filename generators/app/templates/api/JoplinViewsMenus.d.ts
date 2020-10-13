@@ -5,7 +5,7 @@ import Plugin from '../Plugin';
  *
  * [View the demo plugin](https://github.com/laurent22/joplin/tree/dev/CliClient/tests/support/plugins/menu)
  */
-export default class JoplinViewsMenuItems {
+export default class JoplinViewsMenus {
     private store;
     private plugin;
     constructor(plugin: Plugin, store: any);
