@@ -19,9 +19,9 @@ export interface Command {
 	iconName?: string,
 
 	/**
-	 * Code to be ran when the command is executed. It maybe return a result.
+	 * Code to be ran when the command is executed. It may return a result.
 	 */
-	execute(props:any):Promise<any>
+	execute(...args:any[]):Promise<any | void>
 
 	/**
 	 * Defines whether the command should be enabled or disabled, which in turns affects
