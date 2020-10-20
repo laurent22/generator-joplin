@@ -9,9 +9,12 @@ export interface Command {
 	name: string
 
 	/**
-	 * Label to be displayed on menu items or keyboard shortcut editor for example
+	 * Label to be displayed on menu items or keyboard shortcut editor for example.
+	 * If it is missing, it's assumed it's a private command, to be called programmatically only.
+	 * In that case the command will not appear in the shortcut editor or command panel, and logically
+	 * should not be used as a menu item.
 	 */
-	label: string
+	label?: string
 
 	/**
 	 * Icon to be used on toolbar buttons for example
