@@ -8,21 +8,21 @@ if [[ -n $(git status --porcelain) ]]; then
 fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-JOPLIN_DIR="$SCRIPT_DIR/../joplin"
+LIB_DIR="$SCRIPT_DIR/../joplin/packages/lib"
 
-cd "$JOPLIN_DIR"
+cd "$LIB_DIR"
 npm run generatePluginTypes
 
 cd "$SCRIPT_DIR"
-rsync -a --delete "$JOPLIN_DIR/plugin_types/packages/lib/services/plugins/api/" "$SCRIPT_DIR/generators/app/templates/api/"
-cp "$JOPLIN_DIR/packages/lib/services/plugins/api/types.ts" "$SCRIPT_DIR/generators/app/templates/api/"
+rsync -a --delete "$LIB_DIR/plugin_types/services/plugins/api/" "$SCRIPT_DIR/generators/app/templates/api/"
+cp "$LIB_DIR/services/plugins/api/types.ts" "$SCRIPT_DIR/generators/app/templates/api/"
 cp "$SCRIPT_DIR/generators/app/templates/api_index.ts" "$SCRIPT_DIR/generators/app/templates/api/index.ts"
 rm -f "$SCRIPT_DIR/generators/app/templates/api/types.d.ts"
 # rm -f "$SCRIPT_DIR/generators/app/templates/api/index.d.ts"
 
 npm link
 
-"$JOPLIN_DIR/packages/app-cli/tests/support/plugins/updatePlugins.sh"
+"$LIB_DIR/packages/app-cli/tests/support/plugins/updatePlugins.sh"
 
 git add -A
 git c -m "Updated types"
