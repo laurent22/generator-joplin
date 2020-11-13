@@ -14,15 +14,15 @@ cd "$JOPLIN_DIR"
 npm run generatePluginTypes
 
 cd "$SCRIPT_DIR"
-rsync -a --delete "$JOPLIN_DIR/plugin_types/ReactNativeClient/lib/services/plugins/api/" "$SCRIPT_DIR/generators/app/templates/api/"
-cp "$JOPLIN_DIR/ReactNativeClient/lib/services/plugins/api/types.ts" "$SCRIPT_DIR/generators/app/templates/api/"
+rsync -a --delete "$JOPLIN_DIR/plugin_types/packages/lib/services/plugins/api/" "$SCRIPT_DIR/generators/app/templates/api/"
+cp "$JOPLIN_DIR/packages/lib/services/plugins/api/types.ts" "$SCRIPT_DIR/generators/app/templates/api/"
 cp "$SCRIPT_DIR/generators/app/templates/api_index.ts" "$SCRIPT_DIR/generators/app/templates/api/index.ts"
 rm -f "$SCRIPT_DIR/generators/app/templates/api/types.d.ts"
 # rm -f "$SCRIPT_DIR/generators/app/templates/api/index.d.ts"
 
 npm link
 
-"$JOPLIN_DIR/CliClient/tests/support/plugins/updatePlugins.sh"
+"$JOPLIN_DIR/packages/app-cli/tests/support/plugins/updatePlugins.sh"
 
 git add -A
 git c -m "Updated types"
