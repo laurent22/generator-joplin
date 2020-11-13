@@ -27,3 +27,4 @@ npm link
 
 git add -A
 git c -m "Updated types"
+git push
