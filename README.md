@@ -1,3 +1,11 @@
+* * *
+
+**THE CODE FOR THIS REPOSITORY IS NOT PART OF THE JOPLIN MONOREPO:**
+
+**https://github.com/laurent22/joplin/tree/dev/packages/generator-joplin**
+
+* * *
+
 # generator-joplin
 
 Scaffolds out a new Joplin plugin
